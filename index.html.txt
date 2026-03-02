@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#256af4",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex min-h-screen flex-col overflow-x-hidden">
+<header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-6 lg:px-20 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-10">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-3xl">bolt</span>
+<h2 class="text-slate-900 dark:text-white text-xl font-bold tracking-tight">VoltSound</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Home</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Shop</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Accessories</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Contact</a>
+</nav>
+</div>
+<div class="flex items-center gap-4 lg:gap-6">
+<div class="hidden sm:flex items-center bg-slate-200 dark:bg-slate-800 rounded-lg px-3 py-1.5 w-64">
+<span class="material-symbols-outlined text-slate-500 text-xl">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder:text-slate-500" placeholder="Search products..." type="text"/>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-lg transition-colors relative">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-primary rounded-full"></span>
+</button>
+<button class="p-2 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-lg transition-colors">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<section class="px-6 lg:px-20 py-8">
+<div class="max-w-7xl mx-auto">
+<div class="relative min-h-[600px] flex items-center rounded-2xl overflow-hidden group">
+<div class="absolute inset-0 z-0">
+<img alt="Hero Product" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" data-alt="Premium over-ear wireless headphones on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHNXso1mZ5jvqLbknElLF5Tn9Dmff81lYXKS4oDwky7l_Qn9NZLDnOxIFMrY_lqvJXos0UEXareQmGliOhPLz7SMuhVmcrzgMS68MH1xns0MeKJUSvs6rYw36c7TL0g2l5U2uhidvufFvXMtRmJMhqdFZ_c3NJBfWF2lHI6JAghgnuOZOxtBg_PqyATljlnRON2yGCvD_PhjITvlqcdZwb2C0zyKDTQwnndyE9OllMxnNg4KM6TTJSeSaMqP15nWtsu71Js4QtUDA"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/60 to-transparent"></div>
+</div>
+<div class="relative z-10 px-8 lg:px-16 max-w-2xl flex flex-col gap-6">
+<span class="bg-primary/20 text-primary border border-primary/30 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest w-fit">
+                                New Arrival
+                            </span>
+<h1 class="text-white text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight">
+                                Premium Sound, <br/><span class="text-primary">Boundless Power.</span>
+</h1>
+<p class="text-slate-300 text-lg lg:text-xl font-light leading-relaxed">
+                                Experience the pinnacle of audio engineering and high-speed charging technology. Designed for the modern professional.
+                            </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg font-bold transition-all transform hover:translate-y-[-2px] flex items-center gap-2">
+                                    Shop Now
+                                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<button class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-lg font-bold transition-all">
+                                    Learn More
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="px-6 lg:px-20 py-16">
+<div class="max-w-7xl mx-auto">
+<div class="flex items-end justify-between mb-10">
+<div>
+<h2 class="text-slate-900 dark:text-white text-3xl font-bold tracking-tight mb-2">Featured Earphones</h2>
+<p class="text-slate-500 dark:text-slate-400">Pristine audio quality meets unmatched comfort.</p>
+</div>
+<a class="text-primary font-bold hover:underline flex items-center gap-1" href="#">
+                            View All <span class="material-symbols-outlined text-sm">arrow_outward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 transition-all hover:shadow-2xl hover:shadow-primary/10">
+<div class="aspect-[4/5] overflow-hidden relative">
+<img alt="Aura Pro ANC" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Professional studio headphones on dark surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtrXJrAa9oSOzyi5mSQspa7kJwq0JFfJSUPi4b4BQJLYKDrPrZ63Ty2yCc94huKNuajPHYMVebCpQ5TC0-9pkc4epvqva64V_bMsieRX7BgMpPSnyKjX4R-tDTyBQ2_8Lj9OE2vWtw8Lz40MxnkRtcpWy4GlP0ow321PgcsuhtTgnSJzVF97ixkH2THv_NUjbdhzr_LAhTxQrvFuasYWQNQuXsGi6H-XfZWQXWJkVQMvsHcZdDu8x2yyQD4iScBS5h3zGjxC_aErU"/>
+<div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-2 py-1 rounded">HOT</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold dark:text-white">Aura Pro ANC</h3>
+<p class="text-primary font-bold">$299.00</p>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Advanced noise cancellation with 40-hour battery life and spatial audio support.</p>
+<button class="w-full bg-slate-100 dark:bg-slate-800 hover:bg-primary hover:text-white dark:hover:bg-primary transition-colors py-3 rounded-lg font-semibold flex items-center justify-center gap-2">
+                                    Add to Cart
+                                </button>
+</div>
+</div>
+<div class="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 transition-all hover:shadow-2xl hover:shadow-primary/10">
+<div class="aspect-[4/5] overflow-hidden relative">
+<img alt="Zenith Hi-Fi" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Minimalist white wireless earbuds in charging case" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAArX--rnSzGTqfCg7uKCwMO1noWL67zeYO6OCuuzMDU5aMf-fPSZhNvddnJ6wpKefSrm-wcY9NWJpez1OjAiXGXpDOE4PkZ0qfslPc7-qUYAYLTw7XBKHnCa9P9T298Moje0OEJVUa1YyKw2v_y4-7asjlIoGxTq3ewgbaYUTCCbl7oOXnmxmnlaH6DVwdMXGhz4bqpVBc-ZuadMChwxqzG4hHqQ6kKb8X6RZB_zppKx4COZcUAPrxMEEvlpzIEIZd8_ZYEhafCd8"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold dark:text-white">Zenith Hi-Fi</h3>
+<p class="text-primary font-bold">$450.00</p>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-6">High-resolution audio certified with artisanal wood finish and leather cushions.</p>
+<button class="w-full bg-slate-100 dark:bg-slate-800 hover:bg-primary hover:text-white dark:hover:bg-primary transition-colors py-3 rounded-lg font-semibold flex items-center justify-center gap-2">
+                                    Add to Cart
+                                </button>
+</div>
+</div>
+<div class="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 transition-all hover:shadow-2xl hover:shadow-primary/10">
+<div class="aspect-[4/5] overflow-hidden relative">
+<img alt="Velocity Sport" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Athletic earbuds designed for sports with ear hooks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMqPYgqeHrKNJ1-_F-J8ymox7ZEOq_bwQaJfY-jNdFy4C0fP0sf6r18FoJfWbXgg_UZ6JV_OeJY2ByjzaXRZz24dHjCLAVgeyupTlWKBynXecgA8cqwVFvQGAUeWUohSHpSOhP9NuAFvfrOW-JtMGjjkdM5Avf1Ia3EYMO3zRoR78lTLS8vRaPs8EQcJYveettgF6mkrPdnQ-tx3S8XzAuW6Lzo4Zm33aZzfFnlzfFv6augaQuYEKpE2dy1CUcjz9AKsoVRr-ajao"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold dark:text-white">Velocity Sport</h3>
+<p class="text-primary font-bold">$180.00</p>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Sweat-proof, secure fit with intelligent heart-rate tracking and instant pairing.</p>
+<button class="w-full bg-slate-100 dark:bg-slate-800 hover:bg-primary hover:text-white dark:hover:bg-primary transition-colors py-3 rounded-lg font-semibold flex items-center justify-center gap-2">
+                                    Add to Cart
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-slate-100 dark:bg-slate-900/50 px-6 lg:px-20 py-20">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-3xl lg:text-4xl font-bold dark:text-white mb-4">Why Choose VoltSound?</h2>
+<div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="flex flex-col items-center text-center group">
+<div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-4xl">verified</span>
+</div>
+<h4 class="text-xl font-bold mb-3 dark:text-white text-slate-900">Uncompromising Quality</h4>
+<p class="text-slate-500 dark:text-slate-400">Every product undergoes rigorous testing to ensure it meets our elite standards of performance and durability.</p>
+</div>
+<div class="flex flex-col items-center text-center group">
+<div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-4xl">potted_plant</span>
+</div>
+<h4 class="text-xl font-bold mb-3 dark:text-white text-slate-900">Sustainable Innovation</h4>
+<p class="text-slate-500 dark:text-slate-400">We use eco-friendly materials and energy-efficient circuits to provide power that's kind to the planet.</p>
+</div>
+<div class="flex flex-col items-center text-center group">
+<div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-4xl">support_agent</span>
+</div>
+<h4 class="text-xl font-bold mb-3 dark:text-white text-slate-900">Expert Support</h4>
+<p class="text-slate-500 dark:text-slate-400">Our dedicated team of audio specialists and engineers are available 24/7 to help you optimize your experience.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="px-6 lg:px-20 py-20">
+<div class="max-w-7xl mx-auto">
+<div class="flex items-end justify-between mb-10">
+<div>
+<h2 class="text-slate-900 dark:text-white text-3xl font-bold tracking-tight mb-2">High-Performance Power Banks</h2>
+<p class="text-slate-500 dark:text-slate-400">Energy for the long haul, anywhere you go.</p>
+</div>
+<a class="text-primary font-bold hover:underline flex items-center gap-1" href="#">
+                            Browse Power <span class="material-symbols-outlined text-sm">arrow_outward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="relative group h-[400px] rounded-2xl overflow-hidden flex items-center">
+<img alt="VoltCore 20k" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Sleek black portable power bank with cables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5pSooBRvToQO8rUJNskIlvRDq_roWsz9GJTSkl1JCr2BHr9KGWvER_8o02U90u4-j-urgAZIs7btsMVqHOUjjnWAf_Va6Iv06Yy1Ur35iBI7MkUnR57tHSAZxpqN4YLJPZP9nIY6slgSiIJprKy6l-xoUuCcNFMGp3FkOkFTtGYK9xHkEmFEpWr-UVHmx64RdY16QbiJPIzo-W76pGgJmGtgl1vOxsf-Y5lVyle4tcVcUSZP_tSdPUOjS2aUHafW19X91DiP_cWY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="relative z-10 p-10 mt-auto">
+<h3 class="text-white text-2xl font-bold mb-2">VoltCore 20K</h3>
+<p class="text-slate-300 mb-6 max-w-xs text-sm">Rapid 65W PD charging capable of fueling your laptop and phone simultaneously.</p>
+<button class="bg-primary text-white px-6 py-3 rounded-lg font-bold">Shop $89.00</button>
+</div>
+</div>
+<div class="relative group h-[400px] rounded-2xl overflow-hidden flex items-center">
+<img alt="Slimline Pro" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Ultra slim metallic silver power bank" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiMYw_d7cnqxwqc9FRLtSTZ2DCu4HNz9JiUhGNRFiCPhmbLvLCVy13wzhQilVC96_-23t2aF1OQX9qeLcpH9Qog_mySbePXl4aNFxAFakS1XO7gu-bJ0XK3catFJFDWcYlHw9M57uazMx_m_FuKmeSK5rHkE3ZjVreM1x7dvtcb5Xzd4Bayy8djfkecsXlZeszdg60Utue3bnzKi5r2e9EdSEQOen1tf7wWkM7UoXTfbiU2nnHTNhbB-umQUWKRbrWl8sFpvL2iF0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="relative z-10 p-10 mt-auto">
+<h3 class="text-white text-2xl font-bold mb-2">Slimline Pro</h3>
+<p class="text-slate-300 mb-6 max-w-xs text-sm">The world's thinnest 10,000mAh charger with integrated MagSafe magnets.</p>
+<button class="bg-primary text-white px-6 py-3 rounded-lg font-bold">Shop $59.00</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="px-6 lg:px-20 py-16">
+<div class="max-w-7xl mx-auto bg-primary rounded-3xl p-10 lg:p-20 flex flex-col lg:flex-row items-center justify-between gap-10 overflow-hidden relative">
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-black/10 rounded-full blur-3xl -ml-32 -mb-32"></div>
+<div class="relative z-10 text-center lg:text-left">
+<h2 class="text-white text-3xl lg:text-5xl font-bold mb-4 tracking-tight">Stay ahead of the curve.</h2>
+<p class="text-white/80 text-lg lg:text-xl font-light">Join our club for exclusive product drops and 15% off your first order.</p>
+</div>
+<div class="relative z-10 w-full lg:w-auto">
+<form class="flex flex-col sm:flex-row gap-3">
+<input class="px-6 py-4 rounded-xl bg-white/20 border-white/30 text-white placeholder:text-white/60 focus:ring-2 focus:ring-white/50 border min-w-[300px]" placeholder="Enter your email" type="email"/>
+<button class="bg-white text-primary px-8 py-4 rounded-xl font-bold hover:bg-slate-100 transition-colors">Subscribe</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-slate-900 text-slate-400 px-6 lg:px-20 py-16 border-t border-slate-800">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-2 text-white">
+<span class="material-symbols-outlined text-3xl">bolt</span>
+<h2 class="text-xl font-bold tracking-tight">VoltSound</h2>
+</div>
+<p class="text-sm leading-relaxed">
+                        Leading the charge in premium audio and portable energy solutions. Designed for those who demand more from their tech.
+                    </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">language</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">video_library</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">camera</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest">Shop</h4>
+<ul class="flex flex-col gap-3 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Earphones</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Power Banks</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Charging Cables</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Bundles</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest">Support</h4>
+<ul class="flex flex-col gap-3 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Help Center</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Shipping Info</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Returns</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest">Company</h4>
+<ul class="flex flex-col gap-3 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Sustainability</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Press</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
+<p>© 2024 VoltSound Electronics. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
